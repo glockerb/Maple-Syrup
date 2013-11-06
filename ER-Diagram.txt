@@ -1,3 +1,4 @@
 This will be an
-ER-Diagram for the website
+ER-Diagram for the Website
 VT Maple Syrups
+Created by Geoffer T. Lockerby and Colum Smith
