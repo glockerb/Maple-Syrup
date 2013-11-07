@@ -1,4 +1,4 @@
- create table tblCustomer( 
+create table tblCustomer( 
 pkCustomerId int primary key auto_increment, 
 fldEmail varchar(25) not null, 
 fldFirstName varchar(25) not null, 
@@ -10,7 +10,7 @@ fldZip int(11),
 fldPhoneNumber int(11), 
 fldRegisteredDate int(11));
 
- create table tblOrder( 
+create table tblOrder( 
 pkOrderId int primary key auto_increment, 
 fldOrderDate int(11), 
 fldDateShipped int(11), 
@@ -20,7 +20,7 @@ fkProductId int not null references tbMapleProducts(pkProductId),
 fkSalePrice int not null references tblPrice(pkSalePrice));
 
 
- create table tblSyrup( 
+create table tblSyrup( 
 pkSyrupd int primary key auto_increment, 
 fldGrade varchar(55), 
 fldFarmLocation varchar (55),
@@ -40,10 +40,6 @@ create table tblPrice(
 pkSalePrice int primary key, 
 fldRetailPrice int(11), 
 fldWholesalePrice int(11));
-
-
-
-
 
 create table tblPayment(
 pkPaymentId int primary key auto_increment,
