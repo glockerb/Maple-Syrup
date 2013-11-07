@@ -1,3 +1,57 @@
-This will be the Data 
-Dictionary for the Website
-Vt Maple Syrups
+Column	Type	Null	Default	Comments	MIME
+pkCustomerId	int(11)	No			
+fldEmail	varchar(25)	No			
+fldFirstName	varchar(25)	No			
+fldLastName	varchar(25)	No			
+fldStreetAddress	varchar(55)	Yes	NULL		
+fldCity	varchar(25)	Yes	NULL		
+fldState	varchar(55)	Yes	NULL		
+fldZip	int(11)	Yes	NULL		
+fldPhoneNumber	int(11)	Yes	NULL		
+fldRegisteredDate	int(11)	Yes	NULL		
+
+tblMapleProducts
+Table comments: tblMapleProducts
+Column	Type	Null	Default	Comments	MIME
+pkProductId	int(11)	No			
+fldProductName	varchar(55)	Yes	NULL		
+fldWeight	int(11)	Yes	NULL		
+fldQuantity	int(11)	Yes	NULL		
+fkSalePrice	int(11)	No			
+
+tblOrder
+Table comments: tblOrder
+Column	Type	Null	Default	Comments	MIME
+pkOrderId	int(11)	No			
+fldOrderDate	int(11)	Yes	NULL		
+fldDateShipped	int(11)	Yes	NULL		
+fkCustomerId	int(11)	No			
+fkSyrupId	int(11)	No			
+fkProductId	int(11)	No			
+fkSalePrice	int(11)	No			
+
+tblPayment
+Table comments: tblPayment
+Column	Type	Null	Default	Comments	MIME
+pkPaymentId	int(11)	No			
+fldPaymentType	varchar(55)	Yes	NULL		
+fldCreditCardNum	int(11)	Yes	NULL		
+fldMoneyOrder	int(11)	Yes	NULL		
+
+tblPrice
+Table comments: tblPrice
+Column	Type	Null	Default	Comments	MIME
+pkSalePrice	int(11)	No			
+fldRetailPrice	int(11)	Yes	NULL		
+fldWholesalePrice	int(11)	Yes	NULL		
+
+tblSyrup
+Table comments: tblSyrup
+Column	Type	Null	Default	Comments	MIME
+pkSyrupd	int(11)	No			
+fldGrade	varchar(55)	Yes	NULL		
+fldFarmLocation	varchar(55)	Yes	NULL		
+fldWeight	int(11)	Yes	NULL		
+fldQtyInStock	int(11)	Yes	NULL		
+fldQuantityInStock	int(11)	Yes	NULL		
+fkSalePrice	int(11)	No			

@@ -39,9 +39,8 @@ fkSalePrice int not null references tblPrice(pkSalePrice));
 create table tblPrice( 
 pkSalePrice int primary key, 
 fldRetailPrice int(11), 
-fldWholesalePrice int(11),
-fkProductId int not null refereces tblMapleProducts(pkProductId),
-fkCustomerId int not null references tblCustomer(pkCustomerId));
+fldWholesalePrice int(11));
+
 
 
 
