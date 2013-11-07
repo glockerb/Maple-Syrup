@@ -47,6 +47,7 @@ fkCustomerId int not null references tblCustomer(pkCustomerId));
 
 
 create table tblPayment(
-pkPaymentType varchar primary key,
+pkPaymentId int primary key auto_increment,
+fldPaymentType varchar (55),
 fldCreditCardNum int(11),
 fldMoneyOrder int(11));
