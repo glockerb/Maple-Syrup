@@ -1,3 +1,52 @@
-This will be a
-Schema for
-Vermont Maple Syrup
+ create table tblCustomer( 
+pkCustomerId int primary key auto_increment, 
+fldEmail varchar(25) not null, 
+fldFirstName varchar(25) not null, 
+fldLastName varchar(25) not null, 
+fldStreetAddress varchar(55), 
+fldCity varchar(25), 
+fldState varchar(55), 
+fldZip int(11), 
+fldPhoneNumber int(11), 
+fldRegisteredDate int(11));
+
+ create table tblOrder( 
+pkOrderId int primary key auto_increment, 
+fldOrderDate int(11), 
+fldDateShipped int(11), 
+fkCustomerId  int not null references tblCustomer(pkCustomerId), 
+fkSyrupId int not null references tblSyrup(pkSyruptId),
+fkProductId int not null references tbMapleProducts(pkProductId),
+fkSalePrice int not null references tblPrice(pkSalePrice));
+
+
+ create table tblSyrup( 
+pkSyrupd int primary key auto_increment, 
+fldGrade varchar(55), 
+fldFarmLocation varchar (55),
+fldWeight int(11), 
+fldQtyInStock int(11), 
+fldQuantityInStock int (11),
+fkSalePrice int not null references tblPrice(pkSalePrice));
+
+create table tblMapleProducts(
+pkProductId int primary key auto_increment,
+fldProductName varchar(55),
+fldWeight int(11),
+fldQuantity int(11),
+fkSalePrice int not null references tblPrice(pkSalePrice));
+
+create table tblPrice( 
+pkSalePrice int primary key, 
+fldRetailPrice int(11), 
+fldWholesalePrice int(11),
+fkProductId int not null refereces tblMapleProducts(pkProductId),
+fkCustomerId int not null references tblCustomer(pkCustomerId));
+
+
+
+
+create table tblPayment(
+pkPaymentType varchar primary key,
+fldCreditCardNum int(11),
+fldMoneyOrder int(11));
